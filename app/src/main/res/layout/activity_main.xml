@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <Button
+        android:id="@+id/refreshButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:onClick="refresh"
+        android:text="@string/refresh"
+        android:textColor="#2196F3"
+        app:backgroundTint="#BFBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonConvertTo"
+        app:layout_constraintStart_toStartOf="@+id/buttonConvertFrom"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvertTo" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#B5B2B2"
+        android:gravity="center"
+        android:text="@string/currency_converter"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/convertTo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/choose"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/vauleConvertTo"
+        app:layout_constraintStart_toStartOf="@+id/vauleConvertTo"
+        app:layout_constraintTop_toBottomOf="@+id/vauleConvertTo" />
+
+    <TextView
+        android:id="@+id/convertFrom"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/choose"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/vauleConvertFrom"
+        app:layout_constraintStart_toStartOf="@+id/vauleConvertFrom"
+        app:layout_constraintTop_toBottomOf="@+id/vauleConvertFrom" />
+
+    <EditText
+        android:id="@+id/vauleConvertFrom"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:autofillHints="0"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_amount"
+        android:inputType="number|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/vauleConvertTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/vauleConvertTo"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:autofillHints="0"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_amount"
+        android:inputType="number|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vauleConvertFrom"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/buttonConvertTo"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:onClick="openSelectionScreenTo"
+        android:text="@string/change_currency"
+        android:textColor="#2196F3"
+        app:backgroundTint="#BFBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/convertTo"
+        app:layout_constraintStart_toStartOf="@+id/convertTo"
+        app:layout_constraintTop_toBottomOf="@+id/convertTo" />
+
+    <Button
+        android:id="@+id/buttonConvertFrom"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:onClick="openSelectionScreenFrom"
+        android:text="@string/change_currency"
+        android:textColor="#2196F3"
+        app:backgroundTint="#BFBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/convertFrom"
+        app:layout_constraintStart_toStartOf="@+id/convertFrom"
+        app:layout_constraintTop_toBottomOf="@+id/convertFrom" />
+
+    <ImageButton
+        android:id="@+id/arrowButton"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:onClick="changeFromTo"
+        app:layout_constraintEnd_toEndOf="@+id/vauleConvertTo"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/vauleConvertFrom"
+        app:layout_constraintTop_toBottomOf="@+id/vauleConvertTo"
+        app:srcCompat="@drawable/arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

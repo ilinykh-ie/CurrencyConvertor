@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="currency_converter">Конвертер валюты</string>
+    <string name="choose">Выбирите валюту</string>
+    <string name="enter_amount">Введите сумму</string>
+    <string name="currency_selection">Выбор валюты</string>
+    <string name="change_currency">Изменить валюту</string>
+    <string name="cancel">Отмена</string>
+    <string name="refresh">Обновить курс валют</string>
+    <string name="confirm_button">Готово</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="rub">RUB</string>
+</resources>
